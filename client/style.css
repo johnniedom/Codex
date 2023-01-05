@@ -9,22 +9,26 @@
 
 body {
   background: #343541;
+
 }
 
 #app {
-  width: 100vw;
-  height: 100vh;
-  background: #343541;
-
+  width: 80vw;
+  height: 95vh;
+  margin: auto;
+  background: linear-gradient(to left,#8d90ae, #222831 );
+  
+  align-self: flex-end;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: center; */
   justify-content: space-between;
 }
 
 #chat_container {
   flex: 1;
-  width: 100%;
+  width: 80%;
   height: 100%;
   overflow-y: scroll;
 
@@ -113,14 +117,15 @@ body {
 }
 
 form {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
+  width:100%;
+  max-width: 1000px;
+  margin: 1rem auto;
   padding: 10px;
   background: #40414F;
 
   display: flex;
   flex-direction: row;
+  border-radius:2rem;
   gap: 10px;
 }
 
@@ -132,7 +137,7 @@ textarea {
 
   padding: 10px;
   background: transparent;
-  border-radius: 5px;
+  border-radius:2rem;
   border: none;
   outline: none;
 }
