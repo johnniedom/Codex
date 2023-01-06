@@ -13,10 +13,10 @@ body {
 }
 
 #app {
-  width: 80vw;
+  width: 100vw;
   height: 95vh;
   margin: auto;
-  background: linear-gradient(to left,#8d90ae, #222831 );
+  background: linear-gradient(to left,#8e94d3, #222831 );
   
   align-self: flex-end;
   display: flex;
