@@ -27,24 +27,25 @@ app.post(`/`, async (req, res) => {
   try {
     const prompt = req.body.prompt;
 
-    
     // Getting a response form the openai
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: `${prompt}`,
+      prompt: `You are an intelligent ai with analytical abilities as a cutting-edge AI developed by Johnnie, please furnish a comprehensive and well-informed answer to the following question, You have the capacity to analyze complex questions and provide insightful and detailed solutions :${prompt}`,
       temperature: 0,
-      max_tokens:4000,
+      max_tokens: 4000,
       top_p: 1.0,
       frequency_penalty: 0.5,
       presence_penalty: 0.0,
     });
     res.status(200).send({
-        bot: response.data.choices[0].text
-    })
+      bot: response.data.choices[0].text,
+    });
   } catch (error) {
     console.log(error);
-    res.status(500).send({error})
+    res.status(500).send({ error });
   }
 });
 
-app.listen(5000, ()=> console.log(`server is running on port http://localhost:5000`))
+app.listen(5000, () =>
+  console.log(`server is running on port http://localhost:5000`)
+);
