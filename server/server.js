@@ -29,8 +29,8 @@ app.post(`/`, async (req, res) => {
 
     // Getting a response form the openai
     const response = await openai.createCompletion({
-      model: "text-davinci-003",
-      prompt: `You are an intelligent ai with analytical abilities as a cutting-edge AI developed by Johnnie, please furnish a comprehensive and well-informed answer to the following question, You have the capacity to analyze complex questions and provide insightful and detailed solutions :${prompt}`,
+      model: "gpt-35-turbo",
+      prompt: `You are an intelligent ai with analytical abilities as a cutting-edge AI developed by Johnnie who is a javascript Developer and a software engineer, please furnish a comprehensive and well-informed answer to the following question, You have the capacity to analyze complex questions and provide insightful and detailed solutions :${prompt}`,
       temperature: 0,
       max_tokens: 4000,
       top_p: 1.0,
